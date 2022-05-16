@@ -13,11 +13,11 @@
     <buildtool_depend>catkin</buildtool_depend>
 
     <build_depend>roscpp</build_depend>
-    <build_depend>nav_msgs</build_depend>
     <build_depend>nmea_msgs</build_depend>
+    <build_depend>sensor_msgs</build_depend>
 
     <exec_depend>roscpp</exec_depend>
-    <exec_depend>nav_msgs</exec_depend>
     <exec_depend>nmea_msgs</exec_depend>
+    <exec_depend>sensor_msgs</exec_depend>
 
 </package>

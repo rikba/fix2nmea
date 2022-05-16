@@ -1,0 +1,11 @@
+<launch>
+    <!-- The incoming navsatfix topic -->
+    <arg name="navsatfix_topic" default="/navsatfix"/>
+    <!-- The outgoing nmea topic -->
+    <arg name="nmea_topic" default="/nmea"/>
+
+    <node name="fix2nmea" pkg="fix2nmea" type="fix2nmea" output="screen">
+        <remap from="/navsatfix" to="$(arg navsatfix_topic)"/>
+        <remap from="/nmea" to="$(arg nmea_topic)"/>
+    </node>
+</launch>

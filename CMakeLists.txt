@@ -4,8 +4,8 @@ project(fix2nmea)
 find_package(catkin
         REQUIRED COMPONENTS
         roscpp
-        nav_msgs
         nmea_msgs
+        sensor_msgs
         )
 
 include_directories(include ${catkin_INCLUDE_DIRS})
