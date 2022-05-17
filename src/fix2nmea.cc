@@ -58,7 +58,7 @@ void Transformer::receiveNavHpPosLlh(const ublox_msgs::NavHPPOSLLH::ConstPtr &na
 
   uint8_t
       len = sprintf(buf,
-                    "$GPGGA,%02ld%02ld%02ld.%ld,%02d%08.5f,%c,%03d%08.5f,%c,%d,04,%.1f,%d.%d,M,%d.%d,M,,",
+                    "$GPGGA,%02ld%02ld%02ld.%ld,%02d%08.5f,%c,%03d%08.5f,%c,%d,08,%.1f,%d.%d,M,%d.%d,M,,",
                     time.hours(),
                     time.minutes(),
                     time.seconds(),
@@ -87,8 +87,6 @@ void Transformer::receiveNavHpPosLlh(const ublox_msgs::NavHPPOSLLH::ConstPtr &na
   nmea_msg.header.stamp = now;
   nmea_msg.header.frame_id = "gps";
   nmea_msg.sentence = buf;
-  static int i=0;
-  if (i++ % (8) == 0)
   nmea_pub_.publish(nmea_msg);
 }
 
