@@ -6,6 +6,7 @@ find_package(catkin
         roscpp
         nmea_msgs
         sensor_msgs
+        ublox_msgs
         )
 
 include_directories(include ${catkin_INCLUDE_DIRS})
